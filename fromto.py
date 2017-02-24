@@ -6,3 +6,4 @@ m.sort()
 f = open('to.txt','w')
 for i in m:
     f.writelines(i+'\n')
+f.close()
