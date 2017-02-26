@@ -36,8 +36,8 @@ def saveImages(html, name):
         except :
             continue
 if __name__ == '__main__':
-    num1 = input('请输入起始页: ')
-    num2 = input('请输入终止页: ')
+    num1 = input('The initial page: ')
+    num2 = input('The final page: ')
     print u'开始下载'
     path = u'图片'
     mkdir(path)
