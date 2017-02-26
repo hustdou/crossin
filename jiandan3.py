@@ -21,18 +21,20 @@ def saveImages(html, name):
     imglist = imgre.findall(html)
     for imageURL in imglist:
         splitPath = imageURL.split('/')
-        print imageURL
         fileName = splitPath[-1]
         print fileName, u' 下载完成'
         dirName = name + "/" + fileName
-        if "http:" in imageURL:
-            rr = requests.get(imageURL)
-        else:
-            rr = requests.get('http:' + imageURL)
-        data = rr.content
-        f = open(dirName, 'wb+')
-        f.write(data)
-        f.close()
+        try:
+            if "http:" in imageURL:
+                rr = requests.get(imageURL)
+            else:
+                rr = requests.get('http:' + imageURL)
+            data = rr.content
+            f = open(dirName, 'wb+')
+            f.write(data)
+            f.close()
+        except :
+            continue
 if __name__ == '__main__':
     num1 = input('请输入起始页: ')
     num2 = input('请输入终止页: ')
