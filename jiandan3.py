@@ -44,4 +44,4 @@ if __name__ == '__main__':
     for i in range(num1,num2+1):
         html = getHtml("http://jandan.net/ooxx/page-%d#comments" % i)
         thread.start_new_thread(saveImages, (html, path))
-    raw_input('press ENTER to exit...\n')
+    raw_input('press Enter to exit...\n')
