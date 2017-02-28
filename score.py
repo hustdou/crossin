@@ -14,11 +14,10 @@ with open('report.txt','r') as f:
     for i in range(1,len(list1[1])):
         for j in range(1,len(list1)):
             list2.append(list1[j][i])
-            print j,i
-        list3.append(sum([int(i) for i in list2[:]])//len(list1))
+        list3.append(sum([int(i) for i in list2[:]])//(len(list2)))
         del list2[:]
     list1.insert(1,list3)
-    print list3
+
     j = 1
     for i in list1[2:]:
         i.insert(0,j)
